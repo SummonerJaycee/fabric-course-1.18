@@ -1,5 +1,6 @@
 package io.astranautical.mccourse;
 
+import io.astranautical.mccourse.block.ModBlocks;
 import io.astranautical.mccourse.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
@@ -22,6 +23,7 @@ public class MCCourseMod implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 
 	}
 }
