@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "MCCourse Fabric Mod",
-  "description": "A Mod to learn Fabric Minecraft Modding",
+  "description": "A mod to learn Minecraft Fabric modding",
   "authors": [
     "Astranautical Labs"
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/astranautical/fabric-course-1.18"
   },
 
   "license": "MIT",
@@ -19,7 +19,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.astranatuical.mccourse.MCCourseMod"
+      "io.astranautical.mccourse.MCCourseMod"
     ]
   },
   "mixins": [
@@ -27,7 +27,7 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.13.3",
+    "fabricloader": ">=0.14.6",
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
