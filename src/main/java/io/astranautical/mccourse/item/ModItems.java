@@ -19,6 +19,8 @@ public class ModItems {
 
 
 
+    // Adds functionality to add custom Items to the game.
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MCCourseMod.MOD_ID, name), item);
     }

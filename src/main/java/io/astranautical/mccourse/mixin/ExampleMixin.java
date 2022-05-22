@@ -1,7 +1,6 @@
 package io.astranautical.mccourse.mixin;
 
 import io.astranautical.mccourse.MCCourseMod;
-
 import net.minecraft.client.gui.screen.TitleScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

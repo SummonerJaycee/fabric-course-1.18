@@ -13,14 +13,11 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
 
-    //  ORICHALCUM BLOCK
     public static final Block ORICHALCUM_BLOCK = registerBlock("orichalcum_block",
             new Block(FabricBlockSettings.of(Material.METAL).strength(6f).requiresTool()), ItemGroup.MISC);
 
 
-
     // Adds functionality to add custom Blocks to the game.
-
 
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
@@ -35,5 +32,4 @@ public class ModBlocks {
     public static void registerModBlocks() {
         System.out.println("Registering Mod Blocks for " + MCCourseMod.MOD_ID);
     }
-
 }
