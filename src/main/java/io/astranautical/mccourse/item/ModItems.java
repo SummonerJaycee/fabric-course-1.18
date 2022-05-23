@@ -1,6 +1,7 @@
 package io.astranautical.mccourse.item;
 
 import io.astranautical.mccourse.MCCourseMod;
+import io.astranautical.mccourse.item.custom.DowsingRodItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
@@ -19,6 +20,10 @@ public class ModItems {
     // RAW ORICHALCUM
     public static final Item RAW_ORICHALCUM = registerItem("raw_orichalcum",
             new Item(new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    // DOWSING ROD
+    public static final Item DOWSING_ROD = registerItem("dowsing_rod",
+            new DowsingRodItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxDamage(32)));
 
 
 
