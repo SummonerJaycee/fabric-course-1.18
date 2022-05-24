@@ -25,6 +25,10 @@ public class ModItems {
     public static final Item DOWSING_ROD = registerItem("dowsing_rod",
             new DowsingRodItem(new FabricItemSettings().group(ModItemGroups.COURSE).maxDamage(32)));
 
+    // TURNIP
+    public static final Item TURNIP = registerItem("turnip",
+            new Item(new FabricItemSettings().group(ModItemGroups.COURSE).food(ModFoodComponents.TURNIP)));
+
 
 
     // Adds functionality to add custom Items to the game.
