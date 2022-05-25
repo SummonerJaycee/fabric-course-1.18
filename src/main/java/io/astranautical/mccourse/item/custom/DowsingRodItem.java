@@ -1,14 +1,23 @@
 package io.astranautical.mccourse.item.custom;
 
+import io.astranautical.mccourse.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.text.LiteralText;
+import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class DowsingRodItem extends Item {
     public DowsingRodItem(Settings settings) {
@@ -46,6 +55,15 @@ public class DowsingRodItem extends Item {
         return super.useOnBlock(context);
     }
 
+    @Override
+    public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+        if(Screen.hasShiftDown()) {
+            tooltip.add(new TranslatableText("item.mccourse.dowsing_rod.tooltip.shift"));
+        } else {
+            tooltip.add(new TranslatableText("item.mccourse.dowsing_rod.tooltip"));
+        }
+    }
+
     private void outputValuableCoordinates(BlockPos blockPos, PlayerEntity player, Block blockBelow) {
         player.sendMessage(new LiteralText("Found " +
                 blockBelow.asItem().getName().getString() + " at " +
@@ -53,7 +71,10 @@ public class DowsingRodItem extends Item {
     }
 
     private boolean isValuableBlock(Block block) {
-        return block == Blocks.COAL_ORE || block == Blocks.COPPER_ORE
-                        || block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE;
+        return ModTags.Blocks.DOWSING_ROD_DETECTABLE_BLOCKS.contains(block);
+
+        // USED TO BE: block == Blocks.COAL_ORE || block == Blocks.COPPER_ORE
+        //             || block == Blocks.DIAMOND_ORE || block == Blocks.IRON_ORE;
+
     }
 }
