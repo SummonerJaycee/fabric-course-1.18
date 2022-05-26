@@ -1,15 +1,14 @@
 package io.astranautical.mccourse.block;
 
 import io.astranautical.mccourse.MCCourseMod;
+import io.astranautical.mccourse.block.custom.ModPressurePlateBlock;
 import io.astranautical.mccourse.block.custom.ModStairsBlock;
+import io.astranautical.mccourse.block.custom.ModStoneButtonBlock;
 import io.astranautical.mccourse.block.custom.SpeedyBlock;
 import io.astranautical.mccourse.item.ModItemGroups;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Material;
-import net.minecraft.block.SlabBlock;
-import net.minecraft.block.StairsBlock;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -46,6 +45,21 @@ public class ModBlocks {
     // ORICHALCUM SLAB
     public static final Block ORICHALCUM_SLAB = registerBlock("orichalcum_slab",
             new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    // ORICHALCUM BUTTON
+    public static final Block ORICHALCUM_BUTTON = registerBlock("orichalcum_button",
+            new ModStoneButtonBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    // ORICHALCUM PRESSURE PLATE
+    public static final Block ORICHALCUM_PRESSURE_PLATE = registerBlock("orichalcum_pressure_plate",
+            new ModPressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    // ORICHALCUM FENCE
+    public static final Block ORICHALCUM_FENCE = registerBlock("orichalcum_fence",
+            new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+
 
 
     // Adds functionality to add custom Blocks to the game.
