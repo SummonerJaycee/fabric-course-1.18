@@ -1,10 +1,7 @@
 package io.astranautical.mccourse.block;
 
 import io.astranautical.mccourse.MCCourseMod;
-import io.astranautical.mccourse.block.custom.ModPressurePlateBlock;
-import io.astranautical.mccourse.block.custom.ModStairsBlock;
-import io.astranautical.mccourse.block.custom.ModStoneButtonBlock;
-import io.astranautical.mccourse.block.custom.SpeedyBlock;
+import io.astranautical.mccourse.block.custom.*;
 import io.astranautical.mccourse.item.ModItemGroups;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -57,9 +54,23 @@ public class ModBlocks {
 
     // ORICHALCUM FENCE
     public static final Block ORICHALCUM_FENCE = registerBlock("orichalcum_fence",
-            new SlabBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+            new FenceBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
+    // ORICHALCUM FENCE GATE
+    public static final Block ORICHALCUM_FENCE_GATE = registerBlock("orichalcum_fence_gate",
+            new FenceGateBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
 
+    // ORICHALCUM WALL
+    public static final Block ORICHALCUM_WALL = registerBlock("orichalcum_wall",
+            new WallBlock(FabricBlockSettings.of(Material.METAL).strength(4.0f).requiresTool()), ModItemGroups.COURSE);
+
+    // CHERRY BLOSSOM DOOR
+    public static final Block CHERRY_BLOSSOM_DOOR = registerBlock("cherry_blossom_door",
+            new ModDoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
+
+    // CHERRY BLOSSOM TRAPDOOR
+    public static final Block CHERRY_BLOSSOM_TRAPDOOR = registerBlock("cherry_blossom_trapdoor",
+            new ModTrapdoorBlock(FabricBlockSettings.of(Material.WOOD).strength(4.0f).requiresTool().nonOpaque()), ModItemGroups.COURSE);
 
 
     // Adds functionality to add custom Blocks to the game.

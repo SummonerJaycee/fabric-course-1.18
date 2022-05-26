@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "io.astranautical.mccourse.MCCourseMod"
+    ],
+    "client": [
+      "io.astranautical.mccourse.MCCourseClient"
     ]
   },
   "mixins": [
