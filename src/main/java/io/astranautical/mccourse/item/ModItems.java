@@ -94,6 +94,11 @@ public class ModItems {
 
     // ----------------------------------------------------------------------------------
 
+    // ORICHALCUM HORSE ARMOR
+    public static final Item ORICHALCUM_HORSE_ARMOR = registerItem("orichalcum_horse_armor",
+            new HorseArmorItem(15, "orichalcum",
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
     // Adds functionality to add custom Items to the game.
 
     private static Item registerItem(String name, Item item) {
