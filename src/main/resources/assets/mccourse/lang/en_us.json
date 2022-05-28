@@ -41,5 +41,7 @@
 
   "item.mccourse.dowsing_rod.no_valuables": "No Valuables found!",
   "item.mccourse.dowsing_rod.tooltip.shift": "Right-Click to find valuables.",
-  "item.mccourse.dowsing_rod.tooltip": "Press §eSHIFT§r for more information."
+  "item.mccourse.dowsing_rod.tooltip": "Press §eSHIFT§r for more information.",
+
+  "enchantment.mccourse.lightning_striker": "Lightning Striker"
 }

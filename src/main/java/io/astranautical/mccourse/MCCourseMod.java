@@ -1,6 +1,7 @@
 package io.astranautical.mccourse;
 
 import io.astranautical.mccourse.block.ModBlocks;
+import io.astranautical.mccourse.enchantment.ModEnchantments;
 import io.astranautical.mccourse.item.ModItems;
 import io.astranautical.mccourse.util.ModRegistries;
 import net.fabricmc.api.ModInitializer;
@@ -25,6 +26,8 @@ public class MCCourseMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModEnchantments.registerModEnchantments();
 
 		ModRegistries.registerModStuffs();
 	}
