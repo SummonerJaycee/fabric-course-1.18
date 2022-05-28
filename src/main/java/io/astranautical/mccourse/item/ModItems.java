@@ -3,10 +3,8 @@ package io.astranautical.mccourse.item;
 import io.astranautical.mccourse.MCCourseMod;
 import io.astranautical.mccourse.item.custom.*;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.item.Item;
-import net.minecraft.item.PickaxeItem;
-import net.minecraft.item.ShovelItem;
-import net.minecraft.item.SwordItem;
+import net.minecraft.entity.EquipmentSlot;
+import net.minecraft.item.*;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
@@ -68,6 +66,31 @@ public class ModItems {
     public static final Item ORICHALCUM_PAXEL = registerItem("orichalcum_paxel",
             new ModPaxelItem(ModToolMaterial.ORICHALCUM, 1, 1f,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    // ----------------------------------------------------------------------------------
+
+    // ---------------------------------------------------------------------------------- ARMOR!
+
+    // ORICHALCUM HELMET
+    public static final Item ORICHALCUM_HELMET = registerItem("orichalcum_helmet",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    // ORICHALCUM CHESTPLATE
+    public static final Item ORICHALCUM_CHESTPLATE = registerItem("orichalcum_chestplate",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.CHEST,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    // ORICHALCUM LEGGINGS
+    public static final Item ORICHALCUM_LEGGINGS = registerItem("orichalcum_leggings",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.LEGS,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
+    // ORICHALCUM BOOTS
+    public static final Item ORICHALCUM_BOOTS = registerItem("orichalcum_boots",
+            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.FEET,
+                    new FabricItemSettings().group(ModItemGroups.COURSE)));
+
 
     // ----------------------------------------------------------------------------------
 
