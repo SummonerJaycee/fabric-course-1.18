@@ -73,7 +73,7 @@ public class ModItems {
 
     // ORICHALCUM HELMET
     public static final Item ORICHALCUM_HELMET = registerItem("orichalcum_helmet",
-            new ArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
+            new ModArmorItem(ModArmorMaterials.ORICHALCUM, EquipmentSlot.HEAD,
                     new FabricItemSettings().group(ModItemGroups.COURSE)));
 
     // ORICHALCUM CHESTPLATE
